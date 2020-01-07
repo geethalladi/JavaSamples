@@ -21,7 +21,6 @@ public class CollectionsBasic
         if(right == null) {
             return left;
         }
-
         List<Integer> result = new ArrayList<>();
         int i = 0, j = 0;
         while(i < left.size() && j < right.size()) {
@@ -34,11 +33,13 @@ public class CollectionsBasic
                 j++;
             }
         }
-        for(; i < left.size(); i++) {
+        while(i < left.size()) {
             result.add(left.get(i));
+            i++;
         }
-        for(; j < right.size(); j++) {
+        while(j < right.size()) {
             result.add(right.get(j));
+            j++;
         }
         return result;
     }
