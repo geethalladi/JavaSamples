@@ -1,6 +1,10 @@
 package com.freshworks.java.samples.level1;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class Copy
 {
@@ -19,13 +23,18 @@ public class Copy
         }
     }
 
-    static void copyOldStyle(String src, String dst) throws IOException {
+    @SuppressWarnings("unused")
+	static void copyOldStyle(String src, String dst) throws IOException {
         // how to safely close a stream
         // Credits: lvijay@
         InputStream in = null;
         try {
             in = new FileInputStream(src);
-            int read = in.read();
+            byte[] buf = new byte[BUFFER_SIZE];
+            int n;
+            while ((n = in.read(buf)) >= 0) {
+                // out.write(buf, 0, n);
+            }
         } catch (IOException e) {
             // logger.info("Unable to read from source %s".format(src));
         } finally {
