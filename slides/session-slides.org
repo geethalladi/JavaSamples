@@ -1,0 +1,194 @@
+#+Title: Java Whirlwind Tour
+#+Author: geethalladi
+#+Email: geeth.alladi@freshworks.com
+#+OPTIONS: num:nil toc:nil
+#+REVEAL_THEME: white
+#+REVEAL_TRANS: slide
+#+REVEAL_INIT_OPTIONS:slideNumber:true
+#+REVEAL_PLUGINS:(highlight)
+* Java Whirlwind Tour
+** JDK
+- Oracle
+- Open JDK
+- Amazon
+** Pro(s) over ruby
+- stable runtime (JVM)
+- statically typed
+- vast libraries
+- multi threading support
+** Setting up local environment
+#+BEGIN_SRC bash
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home/
+
+export PATH=${PATH}:${JAVA_HOME}/bin:/usr/local/bin/mvn
+#+END_SRC
+** Terminologies
+- java / javac / jdk
+- mvn
+- spring
+- junit
+- hibernate
+** hello, world
+#+BEGIN_SRC java
+  package com.freshworks.java.samples.level0;
+
+  public class HelloWorld {
+      public static void main(String[] args) {
+          System.out.println("hello, world");
+      }
+  }
+#+END_SRC
+
+#+BEGIN_SRC bash
+  $ ls com/freshworks/java/samples/level0/HelloWorld.java
+  -rw-r--r--  1 311909993  20   168B Jan  6 21:38 com/freshworks/java/samples/level0/HelloWorld.java
+
+  $ javac com/freshworks/java/samples/level0/HelloWorld.java
+
+  $ export CLASSPATH=.
+
+  $ java com/freshworks/java/samples/level0/HelloWorld.java
+  hello, world
+#+END_SRC
+** Primitives
+- boolean
+- int
+- short / long
+- float / double
+** Basic Object Orientation
+- Class Creation : PhoneNumber Example
+
+** Interfaces
+
+#+BEGIN_SRC java
+  public interface Vehicle {
+      // all are the abstract methods.
+      void changeGear(int a);
+      void speedUp(int a);
+      void applyBrakes(int a);
+  }
+#+END_SRC
+
+** Abstract Class
+#+BEGIN_SRC java
+
+  // abstract class should contain atleast one abstract method
+  public abstract class Benchmark {
+
+      // abstract method
+      abstract void benchmark();
+
+      public final long repeat(int count) {
+          long start = System.nanoTime();
+          for (int i = 0; i < count; i++)
+              benchmark();
+          return (System.nanoTime() - start);
+      }
+  }
+
+#+END_SRC
+
+** Exceptions
+
+- try / catch / finally
+
+#+BEGIN_SRC java
+
+    public double[] getDataSet(String setName) throws BadDataSetException
+    {
+        String file = setName + ".dset";
+        FileInputStream in = null;
+
+        try {
+            in = new FileInputStream(file);
+            return readDataSet(in);
+        }
+        catch (IOException e) {
+            throw new BadDataSetException();
+        }
+        finally {
+            try {
+                if (in != null)
+                    in.close();
+            }
+            catch (IOException e) {
+              logger.error("Unable to properly close the stream", e)
+            }
+        }
+    }
+    // ... definition of read
+
+#+END_SRC
+
+** Java Collections
+*** List
+- ArrayList
+- LinkedList
+*** Map
+- HashMap
+*** Set
+- HashSet
+** Java Concurrent Collections
+- ConcurrentHashMap
+- CopyOnWriteArrayList (and CopyOnWriteArraySet)
+- BlockingQueue
+- ConcurrentSkipListMap
+** Best Practices
+- Members are always private
+- Use Equals over ==
+- Program to the interface not to the implementation
+- Prefer Composition over Inheritance
+- Prefer 'double' over 'float'
+- Overriding hashcode and equals
+** Best Practices
+- Immutable objects
+- Prefer Empty Collections instead of null
+- Strings are value objects
+- Writing doc comments for your public methods
+- Program Defensively
+- Avoid excessive usage of null
+- Make sure to spend time understanding Java regular expressions
+** Best Practices
+- Avoid empty 'catch' blocks
+- Make sure the exception traces are logged
+- Use Java Collections
+** SOLID Class Design Principles
+- Single responsibility principle
+- Open/closed principle
+- Liskov substitution principle
+- Interface segregation principle
+- Dependency inversion principle
+** Usage of Design Patterns
+- Builder
+- Singleton
+- Proxy
+- Visitor
+- Factory Method
+- Abstract Factory
+** Comparisons
+|---------+------------|
+| Ruby    | Java       |
+|---------+------------|
+| require | import     |
+| nil     | null       |
+| module  | package    |
+| mixin   | interfaces |
+| freeze  | final      |
+|---------+------------|
+
+** Comparisons
+|------------------------------+------------------|
+| Ruby                         | Java             |
+|------------------------------+------------------|
+| attr accessors               | get / Set        |
+| public / private / protected | public / private |
+| rake                         | mvn              |
+| Array                        | ArrayList        |
+| Map / dictionary             | HashMap          |
+|------------------------------+------------------|
+** References
+- [[https://docs.oracle.com/en/java/javase/13/docs/api/index.html][Java API documentation]]
+- Effective Java
+- Java Concurrency in Practice
+- "Gang of Four" Design Patterns
+- [[https://en.wikipedia.org/wiki/SOLID][SOLID Principles]]
