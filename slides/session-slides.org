@@ -1,7 +1,8 @@
-#+Title: Java Whirlwind Tour
+#+Title: Java 101
+#+Subtitle: A Whirlwind Tour
 #+Author: geethalladi
 #+Email: geeth.alladi@freshworks.com
-#+OPTIONS: num:nil toc:nil
+#+OPTIONS: num:nil toc:nil timestamp:nil
 #+REVEAL_THEME: white
 #+REVEAL_TRANS: slide
 #+REVEAL_INIT_OPTIONS:slideNumber:true
@@ -16,18 +17,18 @@
 - statically typed
 - vast libraries
 - multi threading support
-** Setting up local environment
-#+BEGIN_SRC bash
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home/
-
-export PATH=${PATH}:${JAVA_HOME}/bin:/usr/local/bin/mvn
-#+END_SRC
 ** Terminologies
 - java / javac / jdk
 - mvn
 - spring
 - junit
 - hibernate
+** Setting up local environment
+#+BEGIN_SRC bash
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home/
+
+export PATH=${PATH}:${JAVA_HOME}/bin:/usr/local/bin/mvn
+#+END_SRC
 ** hello, world
 #+BEGIN_SRC java
   package com.freshworks.java.samples.level0;
@@ -55,6 +56,21 @@ export PATH=${PATH}:${JAVA_HOME}/bin:/usr/local/bin/mvn
 - int
 - short / long
 - float / double
+#+BEGIN_SRC java
+  public class Primitives
+  {
+      public static void main(String[] args) {
+          long creditCardNumber = 1234_5678_9012_3456L;
+          long socialSecurityNumber = 999_99_9999L;
+          float pi =  3.14_15F;
+          long hexBytes = 0xFF_EC_DE_5E;
+          long hexWords = 0xCAFE_BABE;
+          long maxLong = 0x7fff_ffff_ffff_ffffL;
+          byte nybbles = 0b0010_0101;
+          long bytes = 0b11010010_01101001_10010100_10010010;
+      }
+  }
+#+END_SRC
 ** Basic Object Orientation
 - Class Creation : PhoneNumber Example
 
