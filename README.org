@@ -1,0 +1,3 @@
+* README
+
+This repository contains source files, illustrating various features of the Java™ Programming Language and its runtime (Java Virtual Machine). The examples are shamelessly copied from "Effective Java 3^{rd} edition, Joshua Bloch"
