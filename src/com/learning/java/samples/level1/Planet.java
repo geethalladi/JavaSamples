@@ -1,4 +1,4 @@
-package com.freshworks.java.samples.level1;
+package com.learning.java.samples.level1;
 
 // Enum type with data and behavior
 public enum Planet
