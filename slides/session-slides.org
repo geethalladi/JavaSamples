@@ -40,14 +40,14 @@ export PATH=${PATH}:${JAVA_HOME}/bin:/usr/local/bin/mvn
 #+END_SRC
 
 #+BEGIN_SRC bash
-  $ ls com/freshworks/java/samples/level0/HelloWorld.java
-  -rw-r--r--  1 311909993  20   168B Jan  6 21:38 com/freshworks/java/samples/level0/HelloWorld.java
+  $ ls com/learning/java/samples/level0/HelloWorld.java
+  -rw-r--r--  1 311909993  20   168B Jan  6 21:38 com/learning/java/samples/level0/HelloWorld.java
 
-  $ javac com/freshworks/java/samples/level0/HelloWorld.java
+  $ javac com/learning/java/samples/level0/HelloWorld.java
 
   $ export CLASSPATH=.
 
-  $ java com/freshworks/java/samples/level0/HelloWorld.java
+  $ java com/learning/java/samples/level0/HelloWorld.java
   hello, world
 #+END_SRC
 ** Primitives
