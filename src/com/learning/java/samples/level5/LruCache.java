@@ -1,4 +1,4 @@
-package com.freshworks.java.samples.level5;
+package com.learning.java.samples.level5;
 
 /*
  * Copyright (C) 2011 The Android Open Source Project

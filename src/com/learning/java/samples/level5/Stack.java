@@ -1,8 +1,8 @@
-package com.freshworks.java.samples.level5;
+package com.learning.java.samples.level5;
 
 import java.util.Arrays;
 
-import com.freshworks.java.samples.level3.EmptyStackException;
+import com.learning.java.samples.level3.EmptyStackException;
 
 // Generic stack using Object[]
 public class Stack<E>
