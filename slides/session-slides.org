@@ -24,9 +24,9 @@
 - hibernate
 ** Setting up local environment
 #+BEGIN_SRC bash
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home/
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home/
 
-export PATH=${PATH}:${JAVA_HOME}/bin:/usr/local/bin/mvn
+  export PATH=${PATH}:${JAVA_HOME}/bin:/usr/local/bin/mvn
 #+END_SRC
 ** hello, world
 #+BEGIN_SRC java
@@ -202,7 +202,7 @@ export PATH=${PATH}:${JAVA_HOME}/bin:/usr/local/bin/mvn
 | Map / dictionary             | HashMap          |
 |------------------------------+------------------|
 ** References
-- [[https://docs.oracle.com/en/java/javase/13/docs/api/index.html][Java API documentation]]
+- [[https://docs.oracle.com/en/java/javase/11/docs/api/index.html][Java API documentation]]
 - Effective Java
 - Java Concurrency in Practice
 - "Gang of Four" Design Patterns
