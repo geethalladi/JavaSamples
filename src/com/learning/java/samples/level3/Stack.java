@@ -1,4 +1,4 @@
-package com.freshworks.java.samples.level3;
+package com.learning.java.samples.level3;
 
 import java.util.Arrays;
 
