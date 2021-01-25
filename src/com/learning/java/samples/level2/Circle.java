@@ -1,4 +1,4 @@
-package com.freshworks.java.samples.level2;
+package com.learning.java.samples.level2;
 
 public class Circle extends Figure {
     final double radius;

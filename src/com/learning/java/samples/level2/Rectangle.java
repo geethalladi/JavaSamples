@@ -1,4 +1,4 @@
-package com.freshworks.java.samples.level2;
+package com.learning.java.samples.level2;
 
 class Rectangle extends Figure {
     final double length;
