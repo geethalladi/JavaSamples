@@ -1,4 +1,4 @@
-package com.freshworks.java.samples.level0;
+package com.learning.java.samples.level0;
 
 import java.util.ArrayList;
 import java.util.List;

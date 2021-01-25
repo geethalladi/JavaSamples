@@ -1,4 +1,4 @@
-package com.freshworks.java.samples.level0;
+package com.learning.java.samples.level0;
 
 // Immutable complex number class
 
