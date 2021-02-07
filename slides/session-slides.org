@@ -51,10 +51,10 @@
   hello, world
 #+END_SRC
 ** Primitives
-- boolean
-- int
-- short / long
-- float / double
+- /boolean/
+- /int/
+- /short/ / /long/
+- /float/ / /double/
 #+BEGIN_SRC java
   public class Primitives
   {
@@ -74,7 +74,6 @@
 - Class Creation : PhoneNumber Example
 
 ** Interfaces
-
 #+BEGIN_SRC java
   public interface Vehicle {
       // all are the abstract methods.
@@ -104,9 +103,9 @@
 #+END_SRC
 
 ** Exceptions
-
-- try / catch / finally
-
+- /try/
+- /catch/
+- /finally/
 #+BEGIN_SRC java
 
     public double[] getDataSet(String setName) throws BadDataSetException
@@ -134,37 +133,36 @@
     // ... definition of read
 
 #+END_SRC
-
 ** Java Collections
 *** List
-- ArrayList
-- LinkedList
+- /ArrayList/
+- /LinkedList/
 *** Map
-- HashMap
+- /HashMap/
 *** Set
-- HashSet
+- /HashSet/
 ** Java Concurrent Collections
-- ConcurrentHashMap
-- CopyOnWriteArrayList (and CopyOnWriteArraySet)
-- BlockingQueue
-- ConcurrentSkipListMap
+- /ConcurrentHashMap/
+- /CopyOnWriteArrayList/ (and /CopyOnWriteArraySet/)
+- /BlockingQueue/
+- /ConcurrentSkipListMap/
 ** Best Practices
 - Members are always private
-- Use Equals over ==
+- Use /.equals/ over /==/
 - Program to the interface not to the implementation
 - Prefer Composition over Inheritance
-- Prefer 'double' over 'float'
-- Overriding hashcode and equals
+- Prefer /double/ over /float/
+- Overriding /hashcode/ and /equals/
 ** Best Practices
 - Immutable objects
-- Prefer Empty Collections instead of null
+- Prefer Empty Collections instead of /null/
 - Strings are value objects
 - Writing doc comments for your public methods
 - Program Defensively
-- Avoid excessive usage of null
+- Avoid excessive usage of /null/
 - Make sure to spend time understanding Java regular expressions
 ** Best Practices
-- Avoid empty 'catch' blocks
+- Avoid empty /catch/ blocks
 - Make sure the exception traces are logged
 - Use Java Collections
 ** SOLID Class Design Principles
@@ -190,7 +188,6 @@
 | mixin   | interfaces |
 | freeze  | final      |
 |---------+------------|
-
 ** Comparisons
 |------------------------------+------------------|
 | Ruby                         | Java             |
